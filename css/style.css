@@ -1,0 +1,271 @@
+/* Reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Profile Picture in Hero */
+.hero-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular Image */
+    border: 4px solid #ffcc00; /* Highlighted border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    object-fit: cover;
+    margin-bottom: 15px; /* Space between the image and the text */
+    transition: transform 0.3s;
+}
+
+.hero-pic:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hero Text */
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background: #121212;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Sections */
+section {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #222;
+    border-radius: 5px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    padding: 20px;
+    background: #333;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #181818;
+    color: white;
+}
+
+/* Profile Picture */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 4px solid #ffcc00; /* Adds a border with a custom color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for a craftsy effect */
+    object-fit: cover; /* Ensures the image scales nicely inside the circle */
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Button color */
+    color: #121212; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #e6b800; /* Hover color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Experience Section */
+#experience {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #222;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#experience h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.experience-item h4 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.experience-item ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-item ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+/* Resume Link Button */
+.resume-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-resume {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-resume:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffcc00; /* Gold color */
+    color: #121212; /* Dark text */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #e6b800; /* Slightly darker gold */
+    transform: scale(1.05); /* Slight enlarge effect */
+}

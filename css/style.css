@@ -271,38 +271,30 @@ html {
 }
 
 
-/* Two-column grid with right card spanning both rows */
+/* Two-column layout where right card spans both rows */
 .projects-grid--2x {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;   /* left column, right column */
   grid-auto-rows: auto;
   gap: 20px;
   align-items: start;
 }
 
-/* Place VBTrain (top-left), LiftHeavy (bottom-left), Pricedle (right spanning rows) */
-.project-vb {
-  grid-column: 1;
-  grid-row: 1;
-}
-.project-liftheavy {
-  grid-column: 1;
-  grid-row: 2;
-}
-.project-pricedle {
-  grid-column: 2;
-  grid-row: 1 / span 2; /* spans two rows */
-}
+/* Place items explicitly */
+.project-vbtrain { grid-column: 1; grid-row: 1; }
+.project-liftheavy { grid-column: 1; grid-row: 2; }
+.project-pricedle { grid-column: 2; grid-row: 1 / span 2; }
 
 /* Responsive: stack on narrow screens */
 @media (max-width: 900px) {
   .projects-grid--2x {
     grid-template-columns: 1fr;
   }
-  .project-vb,
+  .project-vbtrain,
   .project-liftheavy,
   .project-pricedle {
     grid-column: 1;
     grid-row: auto;
   }
 }
+

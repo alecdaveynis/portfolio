@@ -269,3 +269,40 @@ html {
     background-color: #e6b800; /* Slightly darker gold */
     transform: scale(1.05); /* Slight enlarge effect */
 }
+
+
+/* Two-column grid with right card spanning both rows */
+.projects-grid--2x {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Place VBTrain (top-left), LiftHeavy (bottom-left), Pricedle (right spanning rows) */
+.project-vb {
+  grid-column: 1;
+  grid-row: 1;
+}
+.project-liftheavy {
+  grid-column: 1;
+  grid-row: 2;
+}
+.project-pricedle {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* spans two rows */
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 900px) {
+  .projects-grid--2x {
+    grid-template-columns: 1fr;
+  }
+  .project-vb,
+  .project-liftheavy,
+  .project-pricedle {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

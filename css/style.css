@@ -271,19 +271,20 @@ html {
 }
 
 
-/* Two-column layout where right card spans both rows */
-.projects-grid--2x {
+/* Two-column layout where right cards span rows */
+/* .projects-grid--2x {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* left column, right column */
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   gap: 20px;
   align-items: start;
 }
 
 /* Place items explicitly */
-.project-vbtrain { grid-column: 1; grid-row: 1; }
-.project-liftheavy { grid-column: 1; grid-row: 2; }
-.project-pricedle { grid-column: 2; grid-row: 1 / span 2; }
+.project-vbtrain { grid-column: 1; }
+.project-liftheavy { grid-column: 1; }
+.project-pricedle { grid-column: 2; }
+.project-slackbot { grid-column: 2; }
 
 /* Responsive: stack on narrow screens */
 @media (max-width: 900px) {
@@ -292,9 +293,50 @@ html {
   }
   .project-vbtrain,
   .project-liftheavy,
-  .project-pricedle {
+  .project-pricedle,
+  .project-slackbot {
     grid-column: 1;
     grid-row: auto;
   }
+} */
+
+/* Two independent vertical stacks side-by-side */
+.projects-columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;       /* no stretching */
 }
 
+.projects-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                     /* vertical spacing between cards */
+}
+
+/* Responsive: stack to one column on small screens */
+@media (max-width: 900px) {
+  .projects-columns {
+    flex-direction: column;
+  }
+}
+/* Two independent vertical stacks side-by-side */
+.projects-columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;       /* no stretching */
+}
+
+.projects-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                     /* vertical spacing between cards */
+}
+
+/* Responsive: stack to one column on small screens */
+@media (max-width: 900px) {
+  .projects-columns {
+    flex-direction: column;
+  }
+}

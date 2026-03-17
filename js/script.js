@@ -159,6 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const storedTheme = window.localStorage.getItem("theme");
   if (storedTheme) {
     applyTheme(storedTheme);
+  } else {
+    applyTheme("dark");
   }
 
   if (themeToggle) {
@@ -175,7 +177,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // initialize icon
     const span = document.createElement("span");
-    span.className = storedTheme === "light" ? "icon-moon" : "icon-sun";
+    const initialTheme = storedTheme || "dark";
+    span.className = initialTheme === "light" ? "icon-moon" : "icon-sun";
     themeToggle.innerHTML = "";
     themeToggle.appendChild(span);
   }

@@ -696,6 +696,18 @@ body {
   display: none;
 }
 
+.project-card-link {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card-link .project-more::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 /* Skills */
 .skills-grid {
   display: grid;

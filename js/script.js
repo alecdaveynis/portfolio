@@ -100,20 +100,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillHoverCard = document.getElementById("skill-hover-card");
 
   const skillHints = {
-    Python: "Python powers my VBTrain platform, Slack Snipe Bot, and core data engineering work.",
-    "C++": "C++ underpins performant, lower-level implementations and computationally heavy coursework I’ve completed.",
+    Python: "Python powers my Chevron AI agents, VBTrain, Slack Snipe Bot, and data engineering pipelines.",
+    "C++": "C/C++ underpins systems coursework including operating systems and computer system organization.",
     Java: "Java appears in systems and backend-focused coursework in my CS degree.",
     R: "R supports statistical analysis and data exploration in my academic projects.",
-    "Machine Learning": "Machine learning is central to my Chevron AI agent work, atmospheric modeling at Duke, and VBTrain.",
-    "Computer Vision": "Computer vision drives my autonomous vehicle collision avoidance system and VBTrain sports analysis.",
-    "Data Engineering": "Data engineering is core to my Chevron internships, from Unity Catalog modeling to fuzzy-matching pipelines.",
+    JavaScript: "JavaScript powers GS Watch modules at Chevron, Pricedle, and this portfolio.",
+    SQL: "SQL supports data models and backends across Chevron internships and PostgreSQL-backed VBTrain.",
+    Azure: "Azure hosts VBTrain on Container Apps and underpins OpenAI and data work across Chevron internships.",
+    AWS: "AWS hosts Slack Snipe Bot and appears alongside GCP and Azure in my cloud toolkit.",
+    Databricks: "Databricks and Unity Catalog powered chemical data models and Synapse-to-Databricks migration at Chevron.",
+    Docker: "Docker supports containerized deployments like VBTrain on Azure Container Apps.",
+    PostgreSQL: "PostgreSQL stores player stats and app data for production VBTrain.",
+    Git: "Git is how I collaborate on Chevron work, open-source projects, and this portfolio.",
+    "OpenAI API": "OpenAI API drives agentic migration, security QC agents, chemical exception handling, and VBTrain feedback.",
+    "Machine Learning": "Machine learning is central to my Chevron AI agent work and VBTrain sports analytics.",
+    "Computer Vision": "Computer vision drives my AV perception pipeline (OpenCV, YOLOv8) and VBTrain film analysis.",
+    "Data Engineering": "Data engineering spans Unity Catalog modeling, fuzzy-matching pipelines, and enterprise migrations at Chevron.",
+    OpenCV: "OpenCV powers lane detection and collision avoidance, plus VBTrain technique evaluation from match footage.",
     HTML: "HTML, CSS, and JavaScript form the foundation of this portfolio and projects like Pricedle.",
     CSS: "CSS brings the interactive, responsive UI to life across my web projects.",
-    JavaScript: "JavaScript powers interactivity in Pricedle and across this portfolio.",
-    Streamlit: "Streamlit helps me ship VBTrain quickly as an interactive tool.",
-    Leadership: "Leadership and collaboration show up in my work with cross-functional teams and student groups.",
-    "Team Collaboration": "Team collaboration skills are evident across my internships, research, and group projects.",
-    Cybersecurity: "Cybersecurity interests connect to my work with Chevron’s Global Security team.",
+    Leadership: "I'm President and Captain of Cornell Men's Volleyball Club and collaborate across Chevron AI teams.",
+    Cybersecurity: "Cybersecurity connects to Chevron Global Security AI — GS Watch and multi-agent QC frameworks.",
   };
 
   const defaultSkillTitle = "Hover a skill to see where I’ve used it.";

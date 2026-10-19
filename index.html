@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alec Daveynis - Portfolio</title>
-    <meta name="description" content="Portfolio of Alec Daveynis – Computer Science & AI enthusiast building intelligent, data‑driven systems.">
+    <meta name="description" content="Portfolio of Alec Daveynis – Cornell CS & AI, incoming M.Eng. Building AI agents, data pipelines, and production tools.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="js/script.js" defer></script>
@@ -58,9 +58,9 @@
                     Alec Daveynis
                 </h1>
                 <p class="hero-subtitle">
-                    Building intelligent systems that turn data into decisions. I’m a Cornell engineering
-                    student focused on AI, data, and real‑world impact – from perception systems and training
-                    tools to large‑scale data pipelines.
+                    Building intelligent systems that turn data into decisions. I’m a Cornell CS student
+                    (AI minor) with an incoming M.Eng in Computer Science, focused on AI agents, data
+                    engineering, and real‑world impact – from production pipelines at Chevron to VBTrain.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn primary scroll-to">View projects</a>
@@ -69,11 +69,11 @@
                 <div class="hero-meta">
                     <div class="meta-pill">
                         <span class="meta-label">Focus</span>
-                        <span class="meta-value">Autonomous systems, ML, data engineering</span>
+                        <span class="meta-value">AI agents, ML, data engineering</span>
                     </div>
                     <div class="meta-pill">
                         <span class="meta-label">Education</span>
-                        <span class="meta-value">Cornell College of Engineering</span>
+                        <span class="meta-value">BS CS ’26 · M.Eng CS ’27 @ Cornell</span>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         <img src="img/Headshot.png" alt="Alec Daveynis">
                     </div>
                     <div class="hero-card-body">
-                        <p class="hero-role">Computer Science & AI Enthusiast</p>
+                        <p class="hero-role">CS & AI @ Cornell · Incoming M.Eng</p>
                         <div class="hero-tags">
                             <span class="tag">Machine Learning</span>
                             <span class="tag">Computer Vision</span>
@@ -109,32 +109,32 @@
             <p class="eyebrow">About</p>
             <h2>From coursework to production‑ready systems</h2>
             <p class="section-intro">
-                Hello, I'm <strong>Alec Daveynis</strong>, a student at Cornell College of Engineering pursuing
-                Computer Science and Artificial Intelligence. I enjoy taking complex, messy problems and
+                Hello, I'm <strong>Alec Daveynis</strong>, a Cornell College of Engineering student pursuing a
+                B.S. in Computer Science with a minor in Artificial Intelligence (expected Dec. 2026), and an
+                incoming M.Eng in Computer Science (Spring 2027). I enjoy taking complex, messy problems and
                 turning them into practical, reliable solutions.
             </p>
         </div>
         <div class="about-grid">
             <div class="about-main">
                 <p>
-                    My work spans perception for autonomous vehicles, AI‑powered training tools, and
-                    data‑rich engineering systems. I like being close to both the algorithms and
-                    the infrastructure – understanding how models work while also making sure they
-                    can be deployed, monitored, and iterated on.
+                    My work spans agentic AI systems and data pipelines at Chevron, production full‑stack
+                    tools like VBTrain, and perception for autonomous driving. I like being close to both
+                    the algorithms and the infrastructure – understanding how models work while also making
+                    sure they can be deployed, monitored, and iterated on.
                 </p>
                 <p>
-                    I'm especially excited about projects where AI augments human decision‑making:
-                    highlighting risk, surfacing patterns in data, or providing feedback that would
-                    be difficult to get otherwise.
+                    Outside of class and internships, I'm President and Captain of Cornell Men's Volleyball
+                    Club. I'm especially excited about projects where AI augments human decision‑making.
                 </p>
             </div>
             <aside class="about-side">
                 <div class="about-card">
                     <h3>Snapshot</h3>
                     <ul class="about-facts">
-                        <li><span>Degree</span><span>CS & AI @ Cornell</span></li>
-                        <li><span>Strengths</span><span>ML, data pipelines, full‑stack</span></li>
-                        <li><span>Interests</span><span>Autonomy, sports analytics, security</span></li>
+                        <li><span>Education</span><span>BS CS + AI · M.Eng CS @ Cornell</span></li>
+                        <li><span>Strengths</span><span>AI agents, data pipelines, CV</span></li>
+                        <li><span>Activities</span><span>Cornell Men’s Volleyball captain</span></li>
                     </ul>
                 </div>
             </aside>
@@ -167,17 +167,17 @@
                         <img src="img/AV.png" alt="Autonomous vehicle lane detection and collision avoidance demo">
                     </div>
                     <div class="project-body">
-                        <h3>Autonomous Vehicle Collision Avoidance & Lane Detection</h3>
+                        <h3>Autonomous Driving Perception & Collision Avoidance</h3>
                         <p>
-                            An autonomous driving perception and safety project combining lane detection and
-                            collision avoidance to enable real-time driving decisions. I built a computer vision
-                            pipeline to detect lane boundaries from video frames, estimate vehicle position,
-                            and trigger collision-avoidance responses to obstacles ahead under noisy, real‑time conditions.
+                            A real-time autonomous driving perception pipeline in Python using OpenCV and YOLOv8
+                            for lane detection, object tracking, and collision avoidance with HLS filtering,
+                            polynomial fitting, and time-to-collision (TTC)-based decision logic. Evaluated on
+                            the KITTI Vision Benchmark dataset for robust performance in urban driving scenarios.
                         </p>
                         <div class="project-tags">
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">YOLOv8</span>
                             <span class="tag">Computer Vision</span>
-                            <span class="tag">Autonomous Systems</span>
-                            <span class="tag">Real‑time Processing</span>
                         </div>
                         <a class="text-link project-more"
                            href="https://github.com/alecdaveynis/Autonomous-Vehicle-Collision-Avoidance-and-Lane-Detection"
@@ -192,15 +192,16 @@
                     <div class="project-body">
                         <h3>VBTrain – AI Volleyball Training Platform</h3>
                         <p>
-                            VBTrain is an AI-powered volleyball training platform I developed to bring advanced
-                            feedback tools to players without consistent access to a coach. Built with Python,
-                            OpenCV, Streamlit, and OpenAI, it analyzes game film to track players, evaluate rotations,
-                            and deliver insights on positioning, errors, and performance metrics.
+                            A production full-stack AI volleyball coaching app (Python, Flask, OpenCV, GPT-4o vision)
+                            deployed on Azure Container Apps with PostgreSQL. Delivers automated technique evaluation,
+                            data-driven lineup optimization, and personalized practice plans — piloted with 50+
+                            collegiate players to extend coaching access through film analysis and natural-language feedback.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Sports Analytics</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">GPT-4o</span>
                         </div>
                         <a class="text-link project-more"
                            href="https://vb-train.com"
@@ -314,35 +315,41 @@
             <div class="skill-group">
                 <h3>Languages</h3>
                 <div class="skill-chips">
-                    <button class="skill-chip" data-skill="Java">Java</button>
                     <button class="skill-chip" data-skill="Python">Python</button>
-                    <button class="skill-chip" data-skill="C++">C++</button>
+                    <button class="skill-chip" data-skill="Java">Java</button>
+                    <button class="skill-chip" data-skill="C++">C/C++</button>
+                    <button class="skill-chip" data-skill="JavaScript">JavaScript</button>
+                    <button class="skill-chip" data-skill="SQL">SQL</button>
                     <button class="skill-chip" data-skill="R">R</button>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>Web & Product</h3>
+                <h3>Cloud & Tools</h3>
                 <div class="skill-chips">
-                    <button class="skill-chip" data-skill="HTML">HTML</button>
-                    <button class="skill-chip" data-skill="CSS">CSS</button>
-                    <button class="skill-chip" data-skill="JavaScript">JavaScript</button>
-                    <button class="skill-chip" data-skill="Streamlit">Streamlit</button>
+                    <button class="skill-chip" data-skill="Azure">Azure</button>
+                    <button class="skill-chip" data-skill="AWS">AWS</button>
+                    <button class="skill-chip" data-skill="Databricks">Databricks</button>
+                    <button class="skill-chip" data-skill="Docker">Docker</button>
+                    <button class="skill-chip" data-skill="PostgreSQL">PostgreSQL</button>
+                    <button class="skill-chip" data-skill="Git">Git</button>
                 </div>
             </div>
             <div class="skill-group">
                 <h3>AI & Data</h3>
                 <div class="skill-chips">
+                    <button class="skill-chip" data-skill="OpenAI API">OpenAI API</button>
                     <button class="skill-chip" data-skill="Machine Learning">Machine Learning</button>
                     <button class="skill-chip" data-skill="Computer Vision">Computer Vision</button>
                     <button class="skill-chip" data-skill="Data Engineering">Data Engineering</button>
-                    <button class="skill-chip" data-skill="Analytics">Analytics</button>
+                    <button class="skill-chip" data-skill="OpenCV">OpenCV</button>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>People & Security</h3>
+                <h3>Web & Leadership</h3>
                 <div class="skill-chips">
+                    <button class="skill-chip" data-skill="HTML">HTML</button>
+                    <button class="skill-chip" data-skill="CSS">CSS</button>
                     <button class="skill-chip" data-skill="Leadership">Leadership</button>
-                    <button class="skill-chip" data-skill="Team Collaboration">Team Collaboration</button>
                     <button class="skill-chip" data-skill="Cybersecurity">Cybersecurity</button>
                 </div>
             </div>
@@ -366,17 +373,35 @@
             <article class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <h3>Data Engineering Intern – Enterprise AI Team</h3>
-                    <p class="timeline-meta">Chevron · May 2025 – Aug. 2025</p>
+                    <h3>AI Engineering Intern – Subsurface/Wells Data & AI + Global Security AI</h3>
+                    <p class="timeline-meta">Chevron · Houston, TX · May 2026 – Aug. 2026</p>
                     <ul>
-                        <li>Designed and implemented a data model for master chemical records using Databricks Unity Catalog, accelerating SME analysis by 50%.</li>
-                        <li>Built a high-accuracy fuzzy-matching pipeline in Python to resolve chemical aliases across vendors, improving ingestion efficiency by 40%.</li>
-                        <li>Developed an AI-powered agent using Azure OpenAI to analyze ambiguous inputs and generate structured SME recommendations.</li>
+                        <li>Built an agentic migration system adopted across the enterprise, automating end-to-end Azure Synapse to Databricks pipeline migration and validation — cutting manual engineering effort by 90%.</li>
+                        <li>Engineered the workflow with Python, OpenAI API, and RESTful services, using CIR-based pipeline translation and LLM-driven semantic verification with iterative self-correction.</li>
+                        <li>Led the runtime quality-control framework for a multi-agent security AI system: real-time response validation, confidence scoring, and fallback mechanisms for accuracy and policy compliance at low latency.</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tag">AI Agents</span>
+                        <span class="tag">Databricks</span>
+                        <span class="tag">OpenAI API</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Data Engineering Intern – Enterprise AI</h3>
+                    <p class="timeline-meta">Chevron · Houston, TX · May 2025 – Aug. 2025</p>
+                    <ul>
+                        <li>Designed and implemented a data model for master chemical records using Databricks Unity Catalog, supporting ML for LPO chemical interactions and accelerating SME analysis by 50%.</li>
+                        <li>Enhanced the pipeline with high-accuracy fuzzy matching (RapidFuzz, pandas) to resolve chemical aliases across vendors, improving ingestion efficiency by 40%.</li>
+                        <li>Leveraged Azure OpenAI to build an AI agent that analyzes ambiguous chemical inputs and generates structured recommendations for SME review or automated resolution.</li>
                     </ul>
                     <div class="timeline-tags">
                         <span class="tag">Data Engineering</span>
                         <span class="tag">Azure</span>
-                        <span class="tag">AI Agents</span>
+                        <span class="tag">Unity Catalog</span>
                     </div>
                 </div>
             </article>
@@ -384,32 +409,16 @@
             <article class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <h3>Data Engineering Intern – Global Security Team</h3>
-                    <p class="timeline-meta">Chevron · May 2024 – Aug. 2024</p>
+                    <h3>Data Engineering Intern – Global Security</h3>
+                    <p class="timeline-meta">Chevron · San Ramon, CA · May 2024 – Aug. 2024</p>
                     <ul>
-                        <li>Enhanced the AI-based GS Watch app, reducing incident detection time by 75%.</li>
-                        <li>Developed frontend and backend modules using NodeJS, SQL, and Jimu packages.</li>
-                        <li>Presented features to stakeholders and incorporated feedback iteratively.</li>
+                        <li>Enhanced the AI-based GS Watch app for the Global Security Information Center, reducing incident detection time by 75% through real-time risk analysis.</li>
+                        <li>Developed and optimized frontend and backend modules using JavaScript (Node.js), SQL, and ArcGIS developer packages in an agile scrum team.</li>
                     </ul>
                     <div class="timeline-tags">
                         <span class="tag">Full‑stack</span>
                         <span class="tag">Security</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3>Machine Learning Researcher</h3>
-                    <p class="timeline-meta">Duke University · June 2022 – Sept. 2022</p>
-                    <ul>
-                        <li>Used Mie scattering models and ML techniques to predict atmospheric particle behavior.</li>
-                        <li>Prepared datasets and presented findings on neural network performance.</li>
-                    </ul>
-                    <div class="timeline-tags">
-                        <span class="tag">Research</span>
-                        <span class="tag">Machine Learning</span>
+                        <span class="tag">ArcGIS</span>
                     </div>
                 </div>
             </article>
@@ -460,7 +469,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Alec Daveynis.</p>
+        <p>&copy; 2026 Alec Daveynis.</p>
     </footer>
 
 </body>

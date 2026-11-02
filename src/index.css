@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-ink: #080b10;
+  --color-cyan: #8feaf2;
+}
+
+html {
+  background: #080b10;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #080b10;
+  font-family: var(--font-sans);
+  color: #e7eef5;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(126, 231, 240, 0.28);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #c8f7fb;
+  outline-offset: 3px;
+}
+
+.panel-scroll {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(158, 231, 240, 0.45) transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

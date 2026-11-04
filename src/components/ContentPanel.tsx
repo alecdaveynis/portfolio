@@ -40,9 +40,9 @@ function Panel({ id }: { id: DestinationId }) {
         <button
           type="button"
           onClick={returnToHub}
-          className="rounded-full px-2 py-1 text-xs tracking-wide text-white/60 hover:text-white"
+          className="rounded-full border border-[#9ee7f0]/55 bg-[#9ee7f0]/15 px-3.5 py-1.5 text-xs font-medium tracking-wide text-[#e7fdff] hover:bg-[#9ee7f0]/25"
         >
-          Return
+          ← Return
         </button>
         <button
           ref={closeRef}

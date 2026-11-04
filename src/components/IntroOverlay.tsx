@@ -16,6 +16,11 @@ export function IntroOverlay() {
       transition={{ duration: reducedMotion ? 0 : 0.4, ease: [0.22, 1, 0.36, 1] }}
       aria-hidden={!visible}
     >
+      <img
+        src={profile.headshot}
+        alt=""
+        className="mb-4 h-20 w-20 rounded-full border border-[#8feaf2]/50 object-cover shadow-[0_8px_28px_rgba(0,0,0,0.45)] md:h-24 md:w-24"
+      />
       <h1 className="text-4xl font-medium tracking-tight text-white md:text-5xl">{profile.name}</h1>
       <p className="mt-2 text-base text-white/78 md:text-lg">{profile.title}</p>
       <p className="mt-4 max-w-prose text-sm leading-relaxed text-[#c5d0dc] md:text-[15px]">{profile.intro}</p>

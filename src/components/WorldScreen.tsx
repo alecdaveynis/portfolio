@@ -80,8 +80,9 @@ export function WorldScreen({ onText, onFail }: { onText: () => void; onFail: ()
         </button>
       ) : null}
       {showHint ? (
-        <p className="pointer-events-none absolute right-5 bottom-6 z-20 hidden font-mono text-[10px] tracking-[0.18em] text-white/40 uppercase md:block">
-          Click a destination to drive
+        <p className="pointer-events-none absolute top-28 left-1/2 z-20 w-[min(calc(100%-2rem),24rem)] -translate-x-1/2 rounded-2xl border border-[#9ee7f0]/50 bg-[#071016]/88 px-4 py-2.5 text-center text-sm leading-snug text-[#e7fdff] shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md md:top-[4.25rem]">
+          Drag to look around.
+          <span className="mt-0.5 block font-medium">Click a destination to drive.</span>
         </p>
       ) : null}
     </div>

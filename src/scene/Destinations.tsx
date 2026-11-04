@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import type { DestinationId } from '../content/portfolio'
+import { sceneDrag } from './CameraController'
 import { litDestinations, useNav, useNavActions } from '../state/navigation'
 import { destinationSpecs, type DestinationSpec } from '../world/layout'
 
@@ -223,6 +224,7 @@ function DestinationLabel({
     button.style.color = '#e7fdff'
     const handleClick = (event: MouseEvent) => {
       event.stopPropagation()
+      if (sceneDrag.moved) return
       onClickRef.current()
     }
     button.addEventListener('click', handleClick)
@@ -254,6 +256,7 @@ function DestinationLabel({
 
 function Destination({ spec, active }: { spec: DestinationSpec; active: boolean }) {
   const { driveTo } = useNavActions()
+  const gl = useThree((state) => state.gl)
   const [hovered, setHovered] = useState(false)
   const lit = active || hovered
 
@@ -278,16 +281,17 @@ function Destination({ spec, active }: { spec: DestinationSpec; active: boolean 
         position={[0, 1.1, 0]}
         onClick={(event) => {
           event.stopPropagation()
+          if (sceneDrag.moved) return
           driveTo(spec.id)
         }}
         onPointerOver={(event) => {
           event.stopPropagation()
           setHovered(true)
-          document.body.style.cursor = 'pointer'
+          gl.domElement.style.cursor = 'pointer'
         }}
         onPointerOut={() => {
           setHovered(false)
-          document.body.style.cursor = ''
+          gl.domElement.style.cursor = 'grab'
         }}
       >
         <cylinderGeometry args={[1.55, 1.55, 2.4, 8]} />

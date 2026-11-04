@@ -1,10 +1,12 @@
 import { destinations, profile, type DestinationId } from '../content/portfolio'
+import { carColors, setCarColor, useCarColor } from '../scene/carPaint'
 import { useNav, useNavActions } from '../state/navigation'
 import { ContactLinks } from './ui'
 
 export function TopNav({ onText }: { onText: () => void }) {
   const { panel, phase, to } = useNav()
   const { openDirect, returnToHub } = useNavActions()
+  const carColor = useCarColor()
 
   const activeId = (id: DestinationId) => panel === id || ((phase === 'driving' || phase === 'arriving') && to === id)
 
@@ -41,6 +43,26 @@ export function TopNav({ onText }: { onText: () => void }) {
         </nav>
         <div className="pointer-events-auto flex items-center gap-3">
           <ContactLinks className="hidden lg:flex" />
+          <label className="flex items-center gap-2 rounded-full border border-white/15 bg-[#080b10]/80 py-1 pr-2 pl-2 text-xs text-white">
+            <span
+              className="h-3.5 w-3.5 shrink-0 rounded-full border border-white/40"
+              style={{ background: carColor.body }}
+              aria-hidden
+            />
+            <span className="hidden text-white/70 sm:inline">Car</span>
+            <select
+              aria-label="Car color"
+              value={carColor.id}
+              onChange={(event) => setCarColor(event.target.value)}
+              className="scheme-dark max-w-[5.5rem] bg-transparent text-xs text-white outline-none sm:max-w-none"
+            >
+              {carColors.map((color) => (
+                <option key={color.id} value={color.id}>
+                  {color.label}
+                </option>
+              ))}
+            </select>
+          </label>
           <button
             type="button"
             onClick={onText}

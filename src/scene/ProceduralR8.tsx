@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
+import { useCarColor } from './carPaint'
 import { coupeBodyGeometry, coupeRoofGeometry, sideBladeGeometry } from './geometry'
 import { drive } from './driveState'
 
@@ -105,6 +106,13 @@ export function ProceduralR8() {
   )
   const spinners = useRef<Array<THREE.Group | null>>([])
   const steerPivots = useRef<Array<THREE.Group | null>>([])
+  const color = useCarColor()
+
+  useEffect(() => {
+    paint.color.set(color.body)
+    bladeMat.color.set(color.body).multiplyScalar(0.42)
+    roofPaint.color.set(color.body).offsetHSL(0, -0.04, 0.05)
+  }, [color, paint, bladeMat, roofPaint])
 
   useEffect(() => {
     return () => {
